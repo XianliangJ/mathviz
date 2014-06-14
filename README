@@ -1,0 +1,7 @@
+The JavaScript version of MathViz was created in June 2014 by porting
+over the original 2009 Python version from python-version/
+
+TODO:
+- IPython Notebook integration?
+- use MathJax
+- PEG.js?
