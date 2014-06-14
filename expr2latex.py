@@ -5220,30 +5220,29 @@ def runTests(verbose=False):
   for e in tests:
     if type(e) is str:
       if verbose:
-        print "===", e, "==="
+        print("=== " + e + " ===")
       newTestSuite.append(e)
     else:
       (i, expected) = e
 
       actual = expr2latex(i) 
       if verbose:
-        print 'Input:   ', i
-        print 'Output:  ', actual
+        print('Input:    ' + i)
+        print('Output:   ' + actual)
       if actual != expected:
         if verbose:
-          print 'FAILED!'
-          print 'Expected:', expected
+          print('FAILED!')
+          print('Expected: ' + expected)
         else:
-          print 'FAILED TEST'
-          print '  Input:   ', i
-          print '  Output:  ', actual
-          print '  Expected:', expected
+          print('FAILED TEST')
+          print('  Input:    ' + i)
+          print('  Output:   ' + actual)
+          print('  Expected: ' + expected)
       if verbose:
-        print
+        print()
       # note that we append *actual* and NOT expected
       newTestSuite.append((i, actual))
 
-print 'Running all tests ...'
+print('Running all tests ...')
 runTests(verbose=False)
-print 'DONE'
-
+print('DONE')
